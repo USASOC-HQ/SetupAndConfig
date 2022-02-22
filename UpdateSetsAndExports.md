@@ -3,7 +3,7 @@ title: "Update Sets and Exports"
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 Following are the update sets to apply and xml to import in their respective order:
 
@@ -33,7 +33,7 @@ Following are the update sets to apply and xml to import in their respective ord
 19. [sys_remote_update_set_Patch20200204.xml](./xml/sys_remote_update_set_Patch20200204.xml): Patch update set (see [Patch 2020-02-04 Update Set](#patch-2020-02-04-update-set)).
 20. [sys_remote_update_set_Post_Upgrade_Patch20201104.xml](./xml/sys_remote_update_set_Post_Upgrade_Patch20201104.xml): Patch update set following upgrade to Paris (see [Post-Upgrade Patch 2020-11-04](./Post-Upgrade%20Patch%202020-11-04.html)).
 
-_________________________________________________________________________________
+______________________
 
 # Initial Update Set Stage 1
 
@@ -76,7 +76,7 @@ ________________________________________________________________________________
 | sys_dictionary_sys_user_group_roles | **Dictionary** / sys_user_group | Group.Roles | |
 | sys_ui_related_business_unit_null | **Related Lists** / business_unit | Business Unit | Adds "Department" to related lists in the "Business Unit" default view. |
 
-_________________________________________________________________________________
+______________________
 
 # Security Incident Setup Update Set
 
@@ -101,7 +101,7 @@ ________________________________________________________________________________
 | sys_restricted_caller_access_751c4406dbba7700683b300f7c96198d | **Restricted Caller Access Privilege** | global | |
 | item_option_new_596f78dcff700200158bffffffffffe4 | **Variable** | Subcategory | |
 
-_________________________________________________________________________________
+______________________
 
 # Patch 2020-02-04 Update Set
 
@@ -147,7 +147,7 @@ ________________________________________________________________________________
 | item_option_new_a94cd075db68bb00683b300f7c9619f5 | **Variable** | Desired Fulfillment Date | |
 | sys_ui_section_b1db451c07570010683af0269c1ed0c8 | **Form Layout** / sc_req_item | Requested Item | |
 
-_________________________________________________________________________________
+______________________
 
 # User Groups
 
@@ -179,6 +179,6 @@ Following are the user groups that are defined in [sys_user_group.xml](sys_user_
 | Telephone Control Officer (TCO) | This group controls ordering and issuing mobile devices throughout the organization. |  catalog; gauge_maker; itil; it_demand_user; it_project_user; knowledge; project_user; report_group; resource_user |
 | Unix                            | Members of this group handle all UNIX issues. |  catalog; catalog; itil; itil; it_project_user; it_project_user; knowledge; knowledge; project_user; project_user; report_group; report_group; resource_user; resource_user |
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*

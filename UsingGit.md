@@ -3,7 +3,7 @@ title: "Using Git with ServiceNow"
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 # Shared Git Organization
 
@@ -17,7 +17,7 @@ Following is a list of some of the custom applications that are stored in git re
 - x_g_inte_off_net_s - Off-Net Software License Tracking app.
 - x_44813_usasoc_cst - General Legacy Customizations. To be superseded with a x_g_inte_* app once new production environment configuration has been determined.
 
-_________________________________________________________________________________
+______________________
 
 # GitHub Authentication from ServiceNow
 
@@ -34,7 +34,7 @@ In ServiceNow, you will create credentials as follows:
 3. In the "User name" field, enter your GitHub login name.
 4. In the "Password" field, enter the personal access token that was generated in GitHub.
 
-_________________________________________________________________________________
+______________________
 
 # Unclass-to-Production Synchronization
 
@@ -63,7 +63,7 @@ This procedure has not yet been fully tested and is subject to further adjustmen
 3. Compress the contents of the entire repository folder into a ZIP file and copy it to the production network.
 4. On the production network extract the repository and create a new branch from the target version tag. See the [Classified Network SDLC](./SDLC.md#classified-network-sclc) section of the SDLC page to determine the name of the new branch and for further instruction.
 
-_________________________________________________________________________________
+______________________
 
 # Legacy Development Repositories
 
@@ -71,6 +71,6 @@ Previously, all ServiceNow application git repositories were initiated from a pe
 
 No operational risk is incurred simply because an application was initiated through a personal dev instance. Such applications are just treated the same as any other 3rd party application. This also means that only the individual developer who owned that personal dev instance can make direct changes to that application without experiencing minor semantic complications. Another benefit of initiating apps from the cloud instance is that they are less prone to permissions and trust issues.
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*

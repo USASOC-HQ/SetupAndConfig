@@ -3,7 +3,7 @@ title: "Recommended SDLC for ServiceNow Custom Applications"
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 # General Overview
 
@@ -36,7 +36,7 @@ Following is a generalized overview of the software development lifecycle. Speci
 >
 >To explain more technically, when changes from the low side are introduced into the high side, all conflicts must be resolved before it can be used. When ServiceNow saves changes to a repository, a new unique identifier is created in the repository database to represent that change. That unique identifier is also relative to the change that preceded it. ServiceNow stores that unique identifier and resolves any future changes by first referencing that unique identifier. A change in the repository on the low side results in a new unique identifier being created to represent the next sequential change as well. When you bring in the changes from the old side, you then have 2 unique identifiers, each claiming to be the successor of the same parent identifier, you must tell Git whether to use the ID that was created on the low side or the one created on the high side. If you pick the one from the high side, then changes from the low side are ignored. If you pick the one from the low side, then the unique identifier stored by ServiceNow no longer exists, and results in a protocol error when it tries to look up something that no longer exist (and ServiceNow wasn't tracking that it had been replaced). Your only option then is to uninstall and reinstall the entire application, possibly resulting in data loss. Even that may not work if the data from the previous application version still exists and the wrong upgrade script is applied to the existing data - because ServiceNow only knows the version that's being installed, and not the one that was being replaced.
 
-_________________________________________________________________________________
+______________________
 
 # Versioning in ServiceNow and Git Repositories
 
@@ -59,7 +59,7 @@ In ServiceNow, you check out (install) a specific version of an application by s
 - Build: This number gets incremented with each change that represents an alternation of the same application version. An example might be to provide a non-production version that has default values which are different than those on the application deployed in production. If this number is not provided, it is assumed to be zero (ie. V2.1 is equivalent V2.1.0).
 - Revision: This number gets incremented any time a subsequent change is made on the high side that is not made on the low side. Typically this is for re-tweaking modifications that were made on the high side after initial deployment.
 
-_________________________________________________________________________________
+______________________
 
 # Unclassified Network SDLC
 
@@ -100,7 +100,7 @@ ________________________________________________________________________________
    - Create release tag to match application version.
    - At this point the latest application version can be deployed to the production network. See the [Using Git with ServiceNow](./UsingGit.html) page for details on moving repositories into the disconnected classified environment.
 
-_________________________________________________________________________________
+______________________
 
 # Classified Network SCLC
 
@@ -144,6 +144,6 @@ Wherever practical, and where there are no security concerns, changes should fir
    1. Check out branch in latest revision tag into production instance.
    2. Application studio should automatically create a separate branch for any modifications that might occur in production.
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*

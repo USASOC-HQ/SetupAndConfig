@@ -3,7 +3,7 @@ title: "USASOC Customizations Application"
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 - **Name:** USASOC Customizations (erwinel)
 - **Application Scope:** x_44813_usasoc_cst
@@ -18,13 +18,13 @@ ________________________________________________________________________________
 
 This application was created as a general-purpose scoped app for customizations that do not warrant being implemented with a separate application.
 
-_________________________________________________________________________________
+______________________
 
 # User Profile Compliance
 
 - To validate the user profile upon login, the UI script [USASOC_OnLogin](./Script%20Sources.md#usasoc_onlogin) makes an ajax call to [x_44813_usasoc_cst.UsasocUserNotificationManager](#usasocusernotificationmanager-api) for user login profile validation.
 
-_________________________________________________________________________________
+______________________
 
 # Custom Properties
 
@@ -42,7 +42,7 @@ Custom properties for this application have the prefix `x_44813_usasoc_cst.`. Th
 - `default_sc_cat_assignment_group`: Sys ID of default Assignment Group for service catalog request items for instances where the location-based assignment group could not be determined.
 - `new_idea_assignment_group`: Sys ID of Assignment Group for new Ideas.
 
-_________________________________________________________________________________
+______________________
 
 # Organization/Location-Based Assigment Group Definitions
 
@@ -58,8 +58,7 @@ The [Organization/Location-Based Assigment Group Definitions](https://inscomscd.
 | Location      | Lookup (`cmn_location`)   | Specific Location to match or empty if there is no specific location to match. |
 | Order         | Number                    | Order of precedence. |
 | Rule Type     | Choice                    | Indicates the rule matching type:<ul><li>`any` **(Match Any):** Only one location-based needs to match</li><li>`all` (**Match All):** All location-based fields must match.</li></ul> |
-
-_________________________________________________________________________________
+______________________
 
 # Approvers by Location
 
@@ -76,7 +75,7 @@ The [Location Approvers](https://inscomscd.servicenowservices.com/nav_to.do?uri=
 | Order          | Number                    | Order of precedence. |
 | Type           | Choice                    | Indicates the rule matching type:<ul><li>`any` **(Match Any):** Only one location-based needs to match</li><li>`all` (**Match All):** All location-based fields must match.</li></ul> |
 
-_________________________________________________________________________________
+______________________
 
 # APIs
 
@@ -571,6 +570,6 @@ var TaskHelper = (function () {
 })();
 ```
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*

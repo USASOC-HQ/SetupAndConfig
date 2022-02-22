@@ -3,7 +3,7 @@ title: "VIP and Mission Priority Customizations"
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 The following custom fields need to be added to the incident table:
 
@@ -18,7 +18,7 @@ The “Is Mission Related” field is directly specified by the user. The “VIP
 
 When the “VIP” field on a user record changes, the “VIP Priority” field on all active incidents for that should be updated accordingly. Additionally, the “Priority” field on all open incidents will need to be recalculated.
 
-_________________________________________________________________________________
+______________________
 
 # Lookup Matcher Rules
 
@@ -61,7 +61,7 @@ ________________________________________________________________________________
 | 3500  | 3 - Low    | 3 - Low    | True               | False        | **5 - Planning**  |
 | 3600  | 3 - Low    | 3 - Low    | False              | False        | **5 - Planning**  |
 
-_________________________________________________________________________________
+______________________
 
 # Incident Record Producer
 
@@ -96,7 +96,7 @@ This helps to identify the incident impact through its pervasiveness rating.
 
 > **Design Notes**: The “Is Mission Related” and “VIP Priority” values are saved as a custom field in the Incident table because management personnel have requirements to track and report on incidents separately, according to values in these fields. Furthermore, the “VIP Priority” value is saved in the incident table to reflect the historical VIP status of the incident if a user’s VIP status changes subsequently.
 
-_________________________________________________________________________________
+______________________
 
 # Urgency and Impact Calculation Algorithm
 
@@ -140,6 +140,6 @@ The “Importance Rating” is determined as follows:
 | No             | Yes                 | **3**             |
 | No             | No                  | **4**             |
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*

@@ -3,25 +3,24 @@ title: "Script Sources"
 
 *[Home](./index.html)*
 
-- [Script Sources](#script-sources)
-  - [Client Scripts](#client-scripts)
-    - [USASOC_OnLogin](#usasoc_onlogin)
-    - [Read-only after approve](#read-only-after-approve)
-  - [Business Rules](#business-rules)
-    - [ARMY sc_req_item creating](#army-sc_req_item-creating)
-    - [ARMY sc_task creating](#army-sc_task-creating)
-    - [Catalog requestor profile validation](#catalog-requestor-profile-validation)
-    - [Ensure Department Business Unit](#ensure-department-business-unit)
-    - [Incident caller profile validation](#incident-caller-profile-validation)
-    - [Initialize User or Profile Photo](#initialize-user-or-profile-photo)
-    - [Initialize User VIP](#initialize-user-vip)
-    - [Sync User Photo](#sync-user-photo)
-    - [Sync User Profile Photo](#sync-user-profile-photo)
-    - [Unassigned Task Work Warning](#unassigned-task-work-warning)
-    - [User Building Changed](#user-building-changed)
-    - [User VIP Changed](#user-vip-changed)
+- [Client Scripts](#client-scripts)
+  - [USASOC_OnLogin](#usasoc_onlogin)
+  - [Read-only after approve](#read-only-after-approve)
+- [Business Rules](#business-rules)
+  - [ARMY sc_req_item creating](#army-sc_req_item-creating)
+  - [ARMY sc_task creating](#army-sc_task-creating)
+  - [Catalog requestor profile validation](#catalog-requestor-profile-validation)
+  - [Ensure Department Business Unit](#ensure-department-business-unit)
+  - [Incident caller profile validation](#incident-caller-profile-validation)
+  - [Initialize User or Profile Photo](#initialize-user-or-profile-photo)
+  - [Initialize User VIP](#initialize-user-vip)
+  - [Sync User Photo](#sync-user-photo)
+  - [Sync User Profile Photo](#sync-user-profile-photo)
+  - [Unassigned Task Work Warning](#unassigned-task-work-warning)
+  - [User Building Changed](#user-building-changed)
+  - [User VIP Changed](#user-vip-changed)
 
-_____________________
+______________________
 
 # Client Scripts
 
@@ -657,7 +656,7 @@ Updates user's location field when the building has changed.
 })(current, previous);
 ```
 
-_____
+______________________
 
 *[Home](./index.html)*
 
