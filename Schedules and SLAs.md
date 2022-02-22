@@ -1,10 +1,10 @@
-
 layout: page
 title: "Schedules and SLAs"
+permalink: /Schedules%20and%20SLAs.html/
 
 *[Home](./index.html)*
 
-_____________________
+______________________
 
 # Schedule Hour Ranges
 
@@ -16,7 +16,7 @@ The following table contains the terminology that is used to indicate common hou
 | **Personnel Hours** | 0800  | 1700 | 8 hour workday with 1 hour for lunch.                                                |
 | **Core Hours**      | 0900  | 1400 | Hours during which all personnel are expected to be on site during normal work days. |
 
-_____________________
+______________________
 
 # Holiday Schedules
 
@@ -39,7 +39,7 @@ Entries from the `US Holidays` schedule is included.
 This schedule contains holidays that are observed only by military and civilian personnel, such as training holidays.
 Entries from the `Facility Holidays` and `US Holidays` schedules are included.
 
-_____________________
+______________________
 
 # Working Hours Schedules
 
@@ -98,6 +98,6 @@ name!=Project Management Schedule
 name!=Resource Management Schedule
 name!=Two week Sprint starting on Wednesday
 
-_____
+______________________
 
 *[Home](./index.html)*

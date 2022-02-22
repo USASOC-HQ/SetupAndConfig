@@ -1,9 +1,10 @@
 layout: page
 title: "User Profile Customizations"
+permalink: /User%20Profile%20Customizations.html/
 
 *[Home](./index.html)*
 
-_________________________________________________________________________________
+______________________
 
 The following phone number fields need to be added to or have the label changed in the Users (`sys_user`) table:
 
@@ -14,7 +15,7 @@ The following phone number fields need to be added to or have the label changed 
 | `u_grey_phone` | Grey Phone  | String | 40                         |
 | `u_rank`       | Rank        | String | 40                         |
 
-_________________________________________________________________________________
+______________________
 
 # User Profile Conformance Validation Requirements
 
@@ -49,7 +50,7 @@ There are 2 schemes for user profile conformance assertions. The first is a dail
 - A non-modal error message is presented to the user with appropriate 1st/3rd person context.
 - If the user has the ITIL role or the Caller/Requested For is the same is the current user, the error message must contain a link that refers to the related user edit form.
 
-_________________________________________________________________________________
+______________________
 
 # User Edit Form Validation
 
@@ -66,7 +67,7 @@ Requirements for the Self Service and Service Portal Views:
   - Grey Phone
   - Black Phone.
 
-_________________________________________________________________________________
+______________________
 
 # Role-specific Field UI Policies
 
@@ -91,7 +92,7 @@ Following are the UI policies that apply to fields according to the user's role:
 | Email        | **Read-Only**         | **Read-Only** | Read/Write    |
 | User ID      | **Read-Only**         | **Read-Only** | **Read-Only** |
 
-_________________________________________________________________________________
+______________________
 
 # Scripts
 
@@ -101,6 +102,6 @@ ________________________________________________________________________________
 - [Catalog requestor profile validation](./Script%20Sources.md#catalog-requestor-profile-validation)
 - [Incident caller profile validation](./Script%20Sources.md#incident-caller-profile-validation)
 
-_________________________________________________________________________________
+______________________
 
 *[Home](./index.html)*
