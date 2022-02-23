@@ -2,235 +2,259 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,maximum-scale=2" />
     <title>User Profile Conformance Validation Requirements</title>
-    <link rel="stylesheet" href="./style/vscode.css" />
     <link rel="stylesheet" href="./style/markdown.css">
     <link rel="stylesheet" href="./style/highlight.css" />
     <link rel="stylesheet" href="./style/math.css" />
     <link rel="stylesheet" href="./style/default.css" />
 </head>
 
-<body class="vscode-body vscode-light">
-    <p><em><a href="./index.html">Home</a></em></p>
-    <hr />
-    <p>The following phone number fields need to be added to or have the label changed in the Users (<code>sys_user</code>) table:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Column Name</th>
-                <th>Label</th>
-                <th>Type</th>
-                <th>Max Length</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>phone</code></td>
-                <td>Black Phone</td>
-                <td>String</td>
-                <td><em>(out-of-the-box default)</em></td>
-            </tr>
-            <tr>
-                <td><code>u_red_phone</code></td>
-                <td>Red Phone</td>
-                <td>String</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td><code>u_grey_phone</code></td>
-                <td>Grey Phone</td>
-                <td>String</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td><code>u_rank</code></td>
-                <td>Rank</td>
-                <td>String</td>
-                <td>40</td>
-            </tr>
-        </tbody>
-    </table>
-    <hr />
-    <h1 id="user-profile-conformance-validation-requirements">User Profile Conformance Validation Requirements</h1>
-    <ul>
-        <li>Building must be selected.</li>
-        <li>Department must be selected.</li>
-        <li>At least one of the following fields must be filled out:
+<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+            <h1 id="site_title">SetupAndConfig</h1>
+            <h2 id="page_title">Files and document for ServiceNow customizations</h2>
+            <div class="horizontal-menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./UpdateSetsAndExports.html">Update Sets and Exports</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            <p>The following phone number fields need to be added to or have the label changed in the Users (<code>sys_user</code>) table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column Name</th>
+                        <th>Label</th>
+                        <th>Type</th>
+                        <th>Max Length</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>phone</code></td>
+                        <td>Black Phone</td>
+                        <td>String</td>
+                        <td><em>(out-of-the-box default)</em></td>
+                    </tr>
+                    <tr>
+                        <td><code>u_red_phone</code></td>
+                        <td>Red Phone</td>
+                        <td>String</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td><code>u_grey_phone</code></td>
+                        <td>Grey Phone</td>
+                        <td>String</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td><code>u_rank</code></td>
+                        <td>Rank</td>
+                        <td>String</td>
+                        <td>40</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h1 id="user-profile-conformance-validation-requirements">User Profile Conformance Validation Requirements</h1>
             <ul>
-                <li>Red Phone</li>
-                <li>Grey Phone</li>
-                <li>Black Phone</li>
+                <li>Building must be selected.</li>
+                <li>Department must be selected.</li>
+                <li>At least one of the following fields must be filled out:
+                    <ul>
+                        <li>Red Phone</li>
+                        <li>Grey Phone</li>
+                        <li>Black Phone</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
-    <h2 id="non-compliance-notification-requirements">Non-compliance Notification Requirements</h2>
-    <p>There are 2 schemes for user profile conformance assertions. The first is a daily check with a modal notification, and the second is a per-reference check with a passive notification.</p>
-    <h3 id="daily-at-login-profile-conformance-checking">Daily At-Login Profile Conformance Checking</h3>
-    <ul>
-        <li>Profile compliance is validated the first time the user logs in for the day.</li>
-        <li>This check must only be performed once per day.</li>
-        <li>If profile is non-compliant, the following applies:
+            <h2 id="non-compliance-notification-requirements">Non-compliance Notification Requirements</h2>
+            <p>There are 2 schemes for user profile conformance assertions. The first is a daily check with a modal notification, and the second is a per-reference check with a passive notification.</p>
+            <h3 id="daily-at-login-profile-conformance-checking">Daily At-Login Profile Conformance Checking</h3>
             <ul>
-                <li>A modal dialog needs to be displayed which the user must acknowledge. This needs to tell them which fields were missing.</li>
-                <li>Upon acknowledgement of a non-compliant profile, they are to be redirected to their user record form where they may provide the missing information.</li>
+                <li>Profile compliance is validated the first time the user logs in for the day.</li>
+                <li>This check must only be performed once per day.</li>
+                <li>If profile is non-compliant, the following applies:
+                    <ul>
+                        <li>A modal dialog needs to be displayed which the user must acknowledge. This needs to tell them which fields were missing.</li>
+                        <li>Upon acknowledgement of a non-compliant profile, they are to be redirected to their user record form where they may provide the missing information.</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
-    <h3 id="passive-profile-conformance-checking">Passive Profile Conformance Checking</h3>
-    <p><strong>When to validate:</strong></p>
-    <ul>
-        <li>When an Incident is submitted or the Caller (<code>incident.caller</code>) field is modified, the profile of the Caller will be validated.</li>
-        <li>When a Request is submitted or the “Requested For” (<code>request.requested_for</code>) field is modified, the profile of the “Requested For” user will be validated.</li>
-    </ul>
-    <p><strong>Notification:</strong></p>
-    <ul>
-        <li>A non-modal error message is presented to the user with appropriate 1st/3rd person context.</li>
-        <li>If the user has the ITIL role or the Caller/Requested For is the same is the current user, the error message must contain a link that refers to the related user edit form.</li>
-    </ul>
-    <hr />
-    <h1 id="user-edit-form-validation">User Edit Form Validation</h1>
-    <p>Requirements for the Self Service and Service Portal Views:</p>
-    <ul>
-        <li>The following fields are mandatory:
+            <h3 id="passive-profile-conformance-checking">Passive Profile Conformance Checking</h3>
+            <p><strong>When to validate:</strong></p>
             <ul>
-                <li>Building</li>
-                <li>Department</li>
-                <li>First Name</li>
-                <li>Last Name</li>
-                <li>Email</li>
+                <li>When an Incident is submitted or the Caller (<code>incident.caller</code>) field is modified, the profile of the Caller will be validated.</li>
+                <li>When a Request is submitted or the “Requested For” (<code>request.requested_for</code>) field is modified, the profile of the “Requested For” user will be validated.</li>
             </ul>
-        </li>
-        <li>At least one of the following fields must be specified:
+            <p><strong>Notification:</strong></p>
             <ul>
-                <li>Red Phone</li>
-                <li>Grey Phone</li>
-                <li>Black Phone.</li>
+                <li>A non-modal error message is presented to the user with appropriate 1st/3rd person context.</li>
+                <li>If the user has the ITIL role or the Caller/Requested For is the same is the current user, the error message must contain a link that refers to the related user edit form.</li>
             </ul>
-        </li>
-    </ul>
-    <hr />
-    <h1 id="role-specific-field-ui-policies">Role-specific Field UI Policies</h1>
-    <p>Following are the UI policies that apply to fields according to the user's role:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Field</th>
-                <th>Non-ITIL Self-Service</th>
-                <th>ITIL User</th>
-                <th>Service Desk</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>First Name</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Rank</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Title</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Department</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Building</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Manager</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Red Phone</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Grey Phone</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Black Phone</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Mobile Phone</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Home Phone</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>VIP</td>
-                <td><strong>Read-Only</strong></td>
-                <td>Read/Write</td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><strong>Read-Only</strong></td>
-                <td><strong>Read-Only</strong></td>
-                <td>Read/Write</td>
-            </tr>
-            <tr>
-                <td>User ID</td>
-                <td><strong>Read-Only</strong></td>
-                <td><strong>Read-Only</strong></td>
-                <td><strong>Read-Only</strong></td>
-            </tr>
-        </tbody>
-    </table>
-    <hr />
-    <h1 id="scripts">Scripts</h1>
-    <h2 id="profile-validation">Profile Validation</h2>
-    <ul>
-        <li>To validate the user profile upon login, the UI script <a href="./Script%20Sources.md#usasoc_onlogin">USASOC_OnLogin</a> makes an ajax call to <a href="./USASOC%20Customizations%20Application.md#usasocusernotificationmanager-api">x_44813_usasoc_cst.UsasocUserNotificationManager</a>            for user login profile validation.</li>
-        <li><a href="./Script%20Sources.md#catalog-requestor-profile-validation">Catalog requestor profile validation</a></li>
-        <li><a href="./Script%20Sources.md#incident-caller-profile-validation">Incident caller profile validation</a></li>
-    </ul>
-    <hr />
-    <p><em><a href="./index.html">Home</a></em></p>
-
+            <hr />
+            <h1 id="user-edit-form-validation">User Edit Form Validation</h1>
+            <p>Requirements for the Self Service and Service Portal Views:</p>
+            <ul>
+                <li>The following fields are mandatory:
+                    <ul>
+                        <li>Building</li>
+                        <li>Department</li>
+                        <li>First Name</li>
+                        <li>Last Name</li>
+                        <li>Email</li>
+                    </ul>
+                </li>
+                <li>At least one of the following fields must be specified:
+                    <ul>
+                        <li>Red Phone</li>
+                        <li>Grey Phone</li>
+                        <li>Black Phone.</li>
+                    </ul>
+                </li>
+            </ul>
+            <hr />
+            <h1 id="role-specific-field-ui-policies">Role-specific Field UI Policies</h1>
+            <p>Following are the UI policies that apply to fields according to the user's role:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Non-ITIL Self-Service</th>
+                        <th>ITIL User</th>
+                        <th>Service Desk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Rank</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Title</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Building</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Manager</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Red Phone</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Grey Phone</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Black Phone</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Phone</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Home Phone</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>VIP</td>
+                        <td><strong>Read-Only</strong></td>
+                        <td>Read/Write</td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><strong>Read-Only</strong></td>
+                        <td><strong>Read-Only</strong></td>
+                        <td>Read/Write</td>
+                    </tr>
+                    <tr>
+                        <td>User ID</td>
+                        <td><strong>Read-Only</strong></td>
+                        <td><strong>Read-Only</strong></td>
+                        <td><strong>Read-Only</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h1 id="scripts">Scripts</h1>
+            <h2 id="profile-validation">Profile Validation</h2>
+            <ul>
+                <li>To validate the user profile upon login, the UI script <a href="./Script%20Sources.md#usasoc_onlogin">USASOC_OnLogin</a> makes an ajax call to <a href="./USASOC%20Customizations%20Application.md#usasocusernotificationmanager-api">x_44813_usasoc_cst.UsasocUserNotificationManager</a>                    for user login profile validation.</li>
+                <li><a href="./Script%20Sources.md#catalog-requestor-profile-validation">Catalog requestor profile validation</a></li>
+                <li><a href="./Script%20Sources.md#incident-caller-profile-validation">Incident caller profile validation</a></li>
+            </ul>
+        </section>
+    </div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <ul class="horizontal-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./UpdateSetsAndExports.html">Update Sets and Exports</a></li>
+            </ul>
+            <p class="copyright">SetupAndConfig maintained by <a href="https://github.com/USASOC-HQ">USASOC-HQ</a></p>
+        </footer>
+    </div>
 </body>
 
 </html>
