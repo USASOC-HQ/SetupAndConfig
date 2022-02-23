@@ -1,4 +1,65 @@
-/* Retrieved on 2/22/2022 12:02:16 PM from https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css */
+.regex-group0 {
+    color: green;
+}
+
+.regex-group1 {
+    color: darkorchid;
+}
+
+.regex-group2 {
+    color: teal;
+}
+
+.regex-group3 {
+    color: indigo;
+}
+
+.regex-group4 {
+    color: forestgreen;
+}
+
+.regex-group5 {
+    color: midnightblue;
+}
+
+.regex-group6 {
+    color: darkolivegreen;
+}
+
+.regex-group7 {
+    color: darkmagenta;
+}
+
+.regex-group8 {
+    color: darkgreen;
+}
+
+.regex-group9 {
+    color: blueviolet;
+}
+
+.regex-symbol {
+    color: firebrick;
+}
+
+.regex-escaped {
+    color: darkorange;
+}
+
+.regex-char-class {
+    color: mediumblue;
+}
+
+.regex-boundary {
+    color: chocolate;
+}
+
+.regex-backref {
+    color: brown;
+}
+
+
+/* Remainder retrieved on 2/22/2022 12:02:16 PM from https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css */
 
 
 /*
